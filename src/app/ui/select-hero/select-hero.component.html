@@ -1,0 +1,10 @@
+<div *ngIf="config != undefined && config.form && config.label && config.formControlName" [formGroup]="config.form" class="form-data float-label">
+    <select class="selector input"
+        [name]="config.formControlName.toLowerCase()"
+        [formControlName]="config.formControlName">
+        <option value="">-- Seleccioná la casa --</option>
+        <option value="marvel">Marvel</option>
+        <option value="dc">DC</option>
+    </select>
+    <label class="Active" htmlFor={{config.formControlName.toLowerCase()}}>{{config.label}}: </label>
+</div>

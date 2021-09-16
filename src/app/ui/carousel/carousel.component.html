@@ -1,0 +1,10 @@
+<carousel *ngIf="imagenesList.length>0; else bloqueSino">
+    <div *ngFor="let image of imagenesList" class="carousel-cell">
+        <img src="{{image.path}}">
+    </div>
+</carousel>
+
+<ng-template #bloqueSino>
+    <img class="img-no-carousel"
+        src='../../../assets/imgs/no-heroe.jpg' />
+</ng-template>

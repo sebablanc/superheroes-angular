@@ -1,0 +1,107 @@
+.agregar-superhero-form{
+    width: 60%;
+    margin: 0 auto;
+    min-height: 84vh !important;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+    align-items: center;
+
+    .new-hero-title {
+        font-size: 80px;
+        color: #d2b104;
+    }
+
+    .marvel-hero-form,
+    .dc-hero-form{
+        position: absolute;
+        width: 5em;
+        height: 5em;
+        background-position: center;
+        background-size: 100% 100%;
+        border-radius: 50%;
+        background-color: white;
+    }
+
+    .marvel-hero-form{
+        background-image: url('../../../assets/imgs/spider-attached.png');
+        left: 0;
+        top: 0;
+    }
+
+    .marvel-hero-form:hover{
+        background-image: url('../../../assets/imgs/spider_swing.png');
+    }
+
+    .dc-hero-form{
+        background-image: url('../../../assets/imgs/batman-walking.png');
+        right: 0;
+        top: 0;
+    }
+
+    .dc-hero-form:hover{
+        background-image: url('../../../assets/imgs/batman-alert.png');
+    }
+
+    .form-house-logo{
+        width: 50px;
+        justify-self: center;
+    }
+    
+    .form-doble-data-column{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+        
+        .doble-data-column-input{
+            width: 100%;
+        }
+
+        .equipamiento-img {
+            width: 200px;
+            justify-self: center;
+        }
+
+        .form-house-logo{
+            width: 50px;
+            justify-self: center;
+        }
+    }
+    
+    .flex-form-data{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .form-grid-data{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-column-gap: 20px;
+        column-gap: 20px;
+        grid-row-gap: 20px;
+        row-gap: 20px;
+        align-items: center;
+        grid-template-rows: repeat(9, max-content);
+    }
+
+    ::ng-deep .carousel-root {
+        width: 75%;
+        outline: none;
+        margin: 0 auto;
+        grid-row: 1 / span 9;
+        
+        .img-no-carousel {
+            margin: auto;
+            width: 95%;
+            height: 100%;
+        }
+    }
+    
+}

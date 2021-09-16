@@ -1,0 +1,16 @@
+<div *ngIf="personaje && personaje.personajeNombre != ''" class="card avatar-card">
+    <img class="avatar-epic-img" src="../../../assets/imgs/epics/{{personaje.personajeNombre.toLowerCase()}}-epic.png"/>
+    <img class="avatar-img" src="../../../assets/imgs/avatars/{{personaje.personajeNombre.toLowerCase()}}-avatar.png"/>
+    <div class="avatar-name" [appCasaColor]="personaje.personajeCasa">{{ personaje.personajeNombre | inicialesMayusculas:'-' }}</div>
+    <div class="avatar-character-name">{{personaje.personajeNombrePersona}} | <i>{{personaje.personajeAnio}}</i></div>
+    <div class="avatar-bio">{{personaje.personajeBiografia}}</div>
+    <div class="avatar-footer">
+        <img *ngIf="showCasa; else espacioEnBlanco" class="casa-img {{personaje.personajeCasa.toLowerCase()}}-casa-img" src="../../../assets/imgs/{{personaje.personajeCasa.toLowerCase()}}-logo.png"/>
+        <ng-template #espacioEnBlanco>
+            <div class="casa-img"></div>
+        </ng-template>
+        <button
+            class="btn-avatar"
+            (click)="avatarCardClicked.emit(true)">Ver más...</button>
+    </div>
+</div>

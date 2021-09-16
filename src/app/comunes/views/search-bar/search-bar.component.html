@@ -1,0 +1,15 @@
+<div class="searcher-container">
+    <div class="searcher-anclaje">
+        <form id="search-form" action="get">
+            <input 
+                type="text"
+                class="search-bar"
+                placeholder="Buscar tu personaje favorito"
+                (keyup)="onChange($event)" />
+            <input
+                class="search-submit"
+                type="submit" />
+            <div class="search-alternador"></div>
+        </form>
+    </div>
+</div>

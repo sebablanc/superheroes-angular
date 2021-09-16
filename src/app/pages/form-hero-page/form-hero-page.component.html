@@ -1,0 +1,48 @@
+<app-layout>
+    <div class="page home-background bangers-text">
+        <form id="addForm" *ngIf="form" [formGroup]="form" class="agregar-superhero-form">
+            <img class="marvel-hero-form" />
+            <img class="dc-hero-form" />
+            <div class="new-hero-title full-grid">{{ personajeForm && personajeForm.value.trim() !='' ?
+                personajeForm.value : '¿A quién tenemos aquí?'}}</div>
+
+            <div class="full-grid flex-form-data">
+                <div class="form-grid-data">
+
+                    <!-- Carousel imagenes -->
+                    <app-carousel class="carousel-root" [imagenesList]="imagenesPersonajeList"></app-carousel>
+
+                    <!-- Personaje Input -->
+                    <app-input-hero [config]="configPersonajeInput"></app-input-hero>
+
+                    <!-- nombrePersona Input -->
+                    <app-input-hero [config]="configNomrbePersonajeInput"></app-input-hero>
+
+                    <!-- Casa Select -->
+                    <div class="form-doble-data-column">
+                        <app-select-hero class="doble-data-column-input" [config]="configCasaSelect"></app-select-hero>
+                        <img class="form-house-logo" [src]="casaImg" />
+                    </div>
+
+                    <!-- equipamiento Input -->
+                    <div class="form-doble-data-column">
+                        <app-input-hero class="doble-data-column-input" [config]="configEquipamientoInput"></app-input-hero>
+                        <img class="equipamiento-img" [src]="equipamientoImg" />
+                    </div>
+
+                    <!-- año Input -->
+                    <app-input-hero [config]="configAnioInput"></app-input-hero>
+
+                    <!-- Cantidad de Imagenes Input -->
+                    <app-input-hero [config]="configCantImagenesInput"></app-input-hero>
+
+                    <!-- Biografía TextArea -->
+                    <app-textarea-hero [config]="configBiografiaTextArea"></app-textarea-hero>
+                    
+                    <!-- Botonera Formulario -->
+                    <app-botonera (btnCancelClicked)="volver()" (btnSubmitClicked)="guardarPersonaje()" (btnDeleteClicked)="eliminarPersonaje()"></app-botonera>
+                </div>
+            </div>
+        </form>
+    </div>
+</app-layout>

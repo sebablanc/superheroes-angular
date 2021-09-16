@@ -1,0 +1,8 @@
+<div *ngIf="config && config.label && config.label.trim()!=''" class="big-button" (click)="bigButtonClicked.emit(config.returnData)">
+    <img *ngIf="config && config.icon" class="icon-button" 
+    [ngClass]="{'just-one-icon-animation': !config.icon2, 'icon1-button': config.icon2}" 
+    src="../../../assets/imgs/icons/{{config.icon}}">
+    <div class="text-button">{{config.label}}</div>
+    <img *ngIf="config && config.icon2" class="icon-button icon2-button" src="../../../assets/imgs/icons/{{config.icon2}}">
+    <div>{{config.description}}</div>
+</div>

@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+*{
+    margin: 0;
+}
+
+.bangers-text{
+    font-family: 'Bangers', cursive;
+}
+
+.page {
+    margin: -3px 0;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    min-height: calc(100vh - 115px);
+}
+
+.home-background {
+    background: linear-gradient(45deg, black 40%, #ed2c23 60%);
+    background-attachment: fixed;
+}
+
+.todos-personajes,
+.marvel,
+.dc {
+    display: grid;
+    grid-template-columns: repeat(7, max-content) !important;
+    row-gap: 20px;
+    column-gap: 20px;
+    align-items: center;
+    grid-template-rows: max-content;
+}
+
+@media screen and (max-width: 1370px){
+    .todos-personajes,
+    .marvel,
+    .dc{
+        grid-template-columns: repeat(5, max-content) !important;
+        column-gap: 28px;
+    }
+}
+
+
+.marvel-background {
+    background-color: #ed2c23;
+    background-attachment: fixed;
+}
+
+.dc-background {
+    background-color: black;
+    background-attachment: fixed;
+}
+
+.card {
+    width: 200px;
+    background-color: white;
+    height: 300px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.new-hero-button ,
+.avatar-card{
+    display: inline-grid;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.float-label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 10px;
+
+    input,
+    select,
+    textarea {
+        height: 26px;
+        padding: 10px 16px 0 10px;
+        outline: 0;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px;
+        background: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    label {
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0px 12px;
+        color: #999;
+        pointer-events: none;
+        position: absolute;
+        transform: translate(0, 15px) scale(1);
+    }
+}
+
+.float-label:focus-within label {
+    transform: translate(0, -10px) scale(0.75);
+    color: currentcolor;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.float-label .Active {
+    transform: translate(0, -10px) scale(0.75);
+    color: currentcolor;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.full-grid{
+    grid-column: 1 / span 2;
+}

@@ -1,0 +1,15 @@
+<app-layout-with-banner>
+    <div class="page home-background home-page">
+        <app-big-button *ngFor="let button of bigButtonsConfig" [config]="button" (bigButtonClicked)="changePage($event)"></app-big-button>
+    </div>
+</app-layout-with-banner>
+
+<!--app-layout-tops>
+            <div top-marvel class="top-style" *ngIf="personajesMarvel.length>0">
+                <app-avatar-card *ngFor="let personaje of personajesMarvel" [personaje]="personaje" [showCasa]="false" ></app-avatar-card>
+            </div>
+
+            <div top-dc class="top-style" *ngIf="personajesDC.length>0">
+                <app-avatar-card *ngFor="let personaje of personajesDC" [personaje]="personaje" [showCasa]="false" ></app-avatar-card>
+            </div>
+        </app-layout-tops-->

@@ -1,0 +1,6 @@
+<div class="app-header" [ngClass]="{'dc-header': changeHeader, 'app-header-background': !changeHeader}">
+    <img class="header-img" src="assets/imgs/page-logo.png" (click)="changePage('home')"/>
+    <div class="header-links-container">
+        <a class="header-link bangers-text" *ngFor="let link of headerLinks" (click)="link.onClick()">{{ link.label }}</a>
+    </div>
+</div>

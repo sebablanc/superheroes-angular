@@ -1,0 +1,10 @@
+<div *ngIf="config != undefined && config.form && config.label && config.formControlName" [formGroup]="config.form" class="form-data float-label">
+    <textarea
+        id="textArea-{{config.formControlName}}"
+        class="input" 
+        [name]="config.formControlName"
+        [formControlName]="config.formControlName"
+        (keyup)="textAreaAdjust()"
+    ></textarea>
+    <label class="Active" [htmlFor]="config.formControlName">{{config.label}}: </label>
+</div>

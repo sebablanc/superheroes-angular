@@ -1,0 +1,11 @@
+<div class="page {{house}}-background">
+    
+    <!-- B U S C A D O R -->
+    <app-search-bar (searchBarEmitter)="filtrarLista($event)"></app-search-bar>
+    
+    <img *ngIf="house.toLowerCase() != 'home' && house.toLowerCase() != 'todos-personajes'" src='../../../../assets/imgs/{{house.toLowerCase()}}-logo.png' />
+    <div *ngIf="personajesFiltrados.length>0" class="{{extraClass}}">
+        <app-new-hero-button (newHeroButtonClicked)="changePage('form-hero', null)"></app-new-hero-button>
+        <app-avatar-card *ngFor="let personaje of personajesFiltrados" [personaje]="personaje" [showCasa]="house.toLowerCase() == 'home' || house.toLowerCase() == 'todos-personajes'" (avatarCardClicked)="changePage('form-hero', personaje)"></app-avatar-card>
+    </div>
+</div>

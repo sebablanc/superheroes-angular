@@ -1,0 +1,20 @@
+.banner{
+    position: relative;
+  
+    .banner-title{
+        position: absolute;
+        font-size: 100px;
+        color: gold;
+        top: calc(50% - 106px);
+        left: calc(50% - 450px);
+        width: 900px;
+        font-weight: bolder;
+        height: 212px;
+        text-align: center;
+        text-shadow: 5px 5px 5px black;
+    }
+
+    #video{
+        width: 100%;
+    }
+}

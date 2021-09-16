@@ -1,0 +1,10 @@
+<div *ngIf="config != undefined && config.form && config.label && config.formControlName" [formGroup]="config.form" class="form-data float-label">
+    <input
+    [id]="config.formControlName"
+    class="input"
+    [type]='config.type' 
+    [name]="config.formControlName"
+    [formControlName]="config.formControlName"
+    />
+    <label class="Active" [htmlFor]="config.formControlName">{{config.label}}: </label>
+</div>
