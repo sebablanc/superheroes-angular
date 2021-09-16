@@ -1,6 +1,6 @@
 # Superheroes
 
-Utilizar este proyecto
+El proyecto está realizado en Angular por lo cual para poder ejecutarlo se deben realizar los siguientes pasos:
 * Acceder mediante terminal/consola al directorio donde esté alojado.
 * Ejecutar el comando <b>npm install</b>
 * Una vez finalizado el comando anterior ejecutar:
